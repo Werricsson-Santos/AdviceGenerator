@@ -14,7 +14,7 @@
 .boxAdvice {
     background-color: hsl(217, 19%, 24%);
     width: 300px;
-    height: 300px;
+    height: 300px auto;
     box-shadow: 3px 3px 2.5px;
     border-radius: 0.8rem;
 }
@@ -30,7 +30,7 @@
 }
 
 .adviceText{
-    padding: 0.2rem 1rem 0.5rem 1rem;
+    padding: 0.2rem 1rem 0rem 1rem;
     color: hsl(193, 38%, 86%);
     font-family: 'Manrope', sans-serif;
     text-align: center;
@@ -38,15 +38,20 @@
 }
 
 .division {
-    padding: 1rem 0.2rem 1rem 0.2rem;
+    margin-top: 1.5rem;
+    padding: 0 0.2rem 2rem 0.2rem;
     display: flex;
     justify-content: center;
 }
 
+#desktop{
+    display: none;
+}
+
 .iconDice {
-    position: relative;
-    bottom: -1.5rem;
-    left: 6.8rem;
+    margin-top: auto;
+    margin-bottom: -1.5rem;
+    margin-left: 6.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,6 +59,11 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    cursor: pointer;
+}
+.iconDice:hover {
+    transition: 1s;
+    box-shadow: 0 0 30px hsla(150, 100%, 66%, 0.8);
 }
 
 .attribution {
@@ -61,4 +71,26 @@
     bottom: 0;
     font-family: 'Manrope', sans-serif;
     color: hsl(193, 38%, 86%);
-}
+    font-size: 11px; text-align: center;
+} .attribution a { 
+        padding-left: 4px;
+        padding-right: 4px;
+        border-radius: 5px; 
+        background-color: hsla(150, 100%, 66%, 0.8); 
+        color: hsl(228, 45%, 44%); 
+    }
+
+    @media(max-width:1600px) and (min-width:900px) {
+        .boxAdvice{
+            width: 500px;
+        }
+        #mobile{
+            display: none;
+        }
+        #desktop{
+            display: block;
+        }
+        .iconDice{
+            margin-left: 13.1rem;
+        }
+    }

@@ -13,12 +13,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Advice generator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -26,15 +20,19 @@
     <div class="boxAdvice">
 
       <div class="adviceId">
-        <p>ADVICE #</p><!-- Advice ID goes here -->
+        <p>ADVICE #<span id="adviceId">ID</span></p><!-- Advice ID goes here -->
       </div>
       <div class="adviceText">
-        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, neque.<!-- Advice text goes here -->"</p>
+        <p>"<span id="adviceText">You need some advice?!<br>Click in the dice<!-- Advice text goes here --></span>"</p>
       <div class="division">
-        <svg width="295" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h105v1H0zM155 8h122v1H155z"/><g transform="translate(120)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
+        <!-- Mobile division svg -->
+          <svg id="mobile" width="295" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h105v1H0zM155 8h122v1H155z"/><g transform="translate(120)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
+        
+        <!-- Desktop division svg -->
+          <svg id="desktop" width="444" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z"/><g transform="translate(212)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
       </div>
 
-      <div class="iconDice">
+      <div class="iconDice" id="randomBtn">
         <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="#202733"/></svg>
       </div>
       </div>
@@ -42,10 +40,12 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Werricsson Santos</a>.
   </div>
 
 </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>

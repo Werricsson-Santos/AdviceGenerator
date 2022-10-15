@@ -7,7 +7,6 @@
     background-color: hsl(218, 23%, 16%);
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -16,24 +15,32 @@
     background-color: hsl(217, 19%, 24%);
     width: 300px;
     height: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 3px 3px 2.5px;
     border-radius: 0.8rem;
 }
 
 .adviceId {
+    padding: 2rem 1rem 0.8rem 1rem;
     color: hsl(150, 100%, 66%);
     font-family: 'Manrope', sans-serif;
     font-size: 12px;
     letter-spacing: 0.3rem;
+    display: flex;
+    justify-content: center;
 }
 
 .adviceText{
+    padding: 0.2rem 1rem 0.5rem 1rem;
     color: hsl(193, 38%, 86%);
     font-family: 'Manrope', sans-serif;
-    font-size: 28px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.division {
+    padding: 1rem 0.2rem 1rem 0.2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .iconDice {
@@ -44,4 +51,11 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    font-family: 'Manrope', sans-serif;
+    color: hsl(193, 38%, 86%);
 }

@@ -44,6 +44,9 @@
 }
 
 .iconDice {
+    position: relative;
+    bottom: -1.5rem;
+    left: 6.8rem;
     display: flex;
     align-items: center;
     justify-content: center;

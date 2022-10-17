@@ -1,20 +1,19 @@
 // Variáveis e seleção de elementos.
-const adviceId = document.querySelector("#adviceId")
+const adviceId = document.querySelector("#adviceId");
 const adviceText = document.querySelector("#adviceText");
 const button = document.querySelector("#randomBtn");
 
 //Funções
 const getAdvice = async(advice) => {
 
-    const adviceApi = "https://api.adviceslip.com/advice"
-
-        const res = await fetch(adviceApi);
+        const res = await fetch("https://api.adviceslip.com/advice");
         const data = res.json();
 
         return data
 };
 
 const showRandomAdvice = async(advice) => {
+
     const data = await getAdvice(advice);
 
     adviceId.innerText = data.slip.id
@@ -23,8 +22,7 @@ const showRandomAdvice = async(advice) => {
 
 
 //Eventos
-button.addEventListener('click', (e) => {
-    e.preventDefault();
+button.addEventListener('click', () => {
 
     const advice = adviceText;
 
